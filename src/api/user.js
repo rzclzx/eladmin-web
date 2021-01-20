@@ -1,8 +1,8 @@
 import request from './axios/baseAxios'
 
-export function get(params) {
+export function list(params) {
   return request({
-    url: '/index',
+    url: 'user/list',
     method: 'get',
     params
   })

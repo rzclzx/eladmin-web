@@ -23,18 +23,18 @@ let mutations = {
 let actions = {
   GetInfo ({ commit }, data) {
     return new Promise((resolve, reject) => {
-      getInfo().then(res => {
-        commit('SET_USER', res || {});
-        resolve(res);
-      }).catch(err => {
-        // 去登陆
-        // commit('SET_USER', {
-        //   username: 'admin'
-        // });
-        // resolve({
-        //   username: 'admin'
-        // });
-        reject(err)
+      // getInfo().then(res => {
+      //   commit('SET_USER', res || {});
+      //   resolve(res);
+      // }).catch(err => {
+      //   reject(err)
+      // });
+      // 去登陆
+      commit('SET_USER', {
+        username: 'admin'
+      });
+      resolve({
+        username: 'admin'
       });
     })
   },
@@ -49,23 +49,23 @@ let actions = {
   },
   LoadMenus ({ commit }, data) {
     return new Promise((resolve, reject) => {
-      buildMenus().then(res => {
-        res = res || [];
-        let menus = menusConfig;
-        menus = menus.concat(res);
-        menus = filterAsyncRouter(menus);
-        commit('SET_MENUS', menus);
-        resolve(menus);
-      }).catch(err => {
-        // 去登陆
-        // let res = [];
-        // let menus = menusConfig;
-        // menus = menus.concat(res);
-        // menus = filterAsyncRouter(menus);
-        // commit('SET_MENUS', menus);
-        // resolve(menus);
-        reject(err)
-      });
+      // buildMenus().then(res => {
+      //   res = res || [];
+      //   let menus = menusConfig;
+      //   menus = menus.concat(res);
+      //   menus = filterAsyncRouter(menus);
+      //   commit('SET_MENUS', menus);
+      //   resolve(menus);
+      // }).catch(err => {
+      //   reject(err)
+      // });
+      // 去登陆
+      let res = [];
+      let menus = menusConfig;
+      menus = menus.concat(res);
+      menus = filterAsyncRouter(menus);
+      commit('SET_MENUS', menus);
+      resolve(menus);
     })
   }
 }

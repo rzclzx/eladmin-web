@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { list } from '@/api/user'
 export default {
   data() {
     return {
@@ -15,7 +16,7 @@ export default {
     
   },
   created() {
-    
+    list().then(res => res)
   },
   methods: {
 
