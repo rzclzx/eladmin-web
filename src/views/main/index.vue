@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import { get } from '@/api/user'
 export default {
   data() {
     return {
@@ -16,9 +15,7 @@ export default {
     
   },
   created() {
-    get().then(res => {
-      console.log(res)
-    })
+    
   },
   methods: {
 
