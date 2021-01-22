@@ -26,7 +26,7 @@ module.exports = {
     },
     proxy: {
       '/base-url/': {
-        target: 'http://localhost:8001',
+        target: process.env.VUE_APP_BASE_PROXY,
         changeOrigin: true,
         pathRewrite: {
           '^/base-url': '/'
