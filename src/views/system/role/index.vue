@@ -225,7 +225,7 @@ export default {
       })
     },
     beforeInit() {
-      this.url = 'api/roles';
+      this.url = 'api/role';
       const sort = 'level,asc';
       this.params = Object.assign({ page: this.page, size: this.size, sort: sort }, this.query);
       return true;

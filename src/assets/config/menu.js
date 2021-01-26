@@ -36,7 +36,7 @@ export default [
     hidden: false,
     component: 'Layout',
     meta: {
-      icon: 'el-icon-setting',
+      icon: 'dashboard',
       title: '系统管理',
       noCache: false,
     },
@@ -58,7 +58,7 @@ export default [
         component: 'system/role/index',
         meta: {
           title: '角色管理',
-          noCache: false
+          noCache: true
         }
       },
       {
@@ -68,7 +68,7 @@ export default [
         component: 'system/menu/index',
         meta: {
           title: '菜单管理',
-          noCache: false
+          noCache: true
         }
       },
       {
@@ -78,7 +78,27 @@ export default [
         component: 'system/dict/index',
         meta: {
           title: '字典管理',
-          noCache: false
+          noCache: true
+        }
+      },
+      {
+        name: '部门管理',
+        path: 'dept',
+        hidden: false,
+        component: 'system/dept/index',
+        meta: {
+          title: '部门管理',
+          noCache: true
+        }
+      },
+      {
+        name: '岗位管理',
+        path: 'job',
+        hidden: false,
+        component: 'system/job/index',
+        meta: {
+          title: '岗位管理',
+          noCache: true
         }
       },
     ]
