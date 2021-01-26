@@ -86,12 +86,12 @@
 
 <script>
 import { add, edit } from '@/api/user'
-import { getAll } from '@/api/role'
+import { list } from '@/api/role'
 export default {
   props: ['isAdd'],
   created() {
-    getAll().then(res => {
-      this.roles = res || [];
+    list().then(res => {
+      this.roles = res.content || [];
     })
   },
   data() {

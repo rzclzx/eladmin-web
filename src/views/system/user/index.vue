@@ -153,7 +153,7 @@ export default {
   },
   methods: {
     beforeInit() {
-      this.url = 'api/users';
+      this.url = 'api/user';
       const sort = 'id,desc';
       this.params = Object.assign({ page: this.page, size: this.size, sort: sort }, this.query);
       return true;

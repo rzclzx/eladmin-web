@@ -10,7 +10,7 @@ export function list(params) {
 
 export function add(data) {
   return request({
-    url: 'api/users',
+    url: 'api/user',
     method: 'post',
     data
   })
@@ -18,7 +18,7 @@ export function add(data) {
 
 export function del(id) {
   return request({
-    url: 'api/users',
+    url: 'api/user',
     method: 'delete',
     data: [id]
   })
@@ -26,7 +26,7 @@ export function del(id) {
 
 export function edit(data) {
   return request({
-    url: 'api/users',
+    url: 'api/user',
     method: 'put',
     data
   })

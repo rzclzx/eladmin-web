@@ -8,11 +8,10 @@ export function saveMenu(data) {
   })
 }
 
-export function getAll(params) {
+export function list(params) {
   return request({
-    url: 'api/roles/all',
-    method: 'get',
-    params
+    url: 'api/role',
+    method: 'get'
   })
 }
 
