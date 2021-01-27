@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     beforeInit() {
-      this.url = 'api/menu';
+      this.url = 'api/menu/tree';
       const sort = 'menuSort,asc';
       this.params = Object.assign({ page: this.page, size: this.size, sort: sort }, this.query);
       return true;
