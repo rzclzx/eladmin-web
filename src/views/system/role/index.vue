@@ -148,7 +148,7 @@
             ref="tree"
             :data="menus"
             :props="{
-              label: 'label',
+              label: 'title',
               children: 'children'
             }"
             :check-strictly="strictly"
@@ -191,7 +191,7 @@ export default {
   created() {
     this.init();
     getMenusTree().then(res => {
-      this.menus = res || [];
+      this.menus = res.content || [];
     })
   },
   methods: {
